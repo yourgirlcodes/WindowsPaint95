@@ -20,27 +20,31 @@
 <body>
 
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-md-12 nav nav-pills nav-justified" role="group" id="color-palette">
-                <button class="btn-group btn-lg" id="yellow"></button>
-                <button class="btn-group btn-lg" id="red"></button>
-                <button class="btn-group btn-lg" id="blue"></button>
-                <button class="btn-group btn-lg" id="black"></button>
-                <button class="btn-group btn-lg" id="green"></button>
-                <button class="btn-group btn-lg" id="grey"></button>
-                <button class="btn-group btn-lg fas fa-eraser" id="white"></button>
-                <button id="clearScreen">CLEAR SCREEN!</button>
-                <button class="brushSize fas fa-paint-brush" value="20" ></button>
-                <button class="brushSize fas fa-paint-brush" value="30"></button>
-                <button class="brushSize fas fa-paint-brush" value="40"></button>
-                <button class="brushSize fas fa-paint-brush" value="3" id="pencil"></button>
-                <button class="brushShape fas fa-paint-brush" value="50%"></button>
-                <button class="brushShape fas fa-paint-brush" value="0%"></button>
 
-            </div>
+        <div class="nav nav-pills nav-justified" role="group" id="color-palette">
+            <button class="btn-group btn-lg" id="yellow"></button>
+            <button class="btn-group btn-lg" id="red"></button>
+            <button class="btn-group btn-lg" id="blue"></button>
+            <button class="btn-group btn-lg" id="black"></button>
+            <button class="btn-group btn-lg" id="green"></button>
+            <button class="btn-group btn-lg" id="grey"></button>
+            <button class="btn-group btn-lg fas fa-eraser" id="white"></button>
+            <button id="clearScreen">NEW CANVAS</button>
+
         </div>
+        <div class="row">
+                <div class="col-xs-3 col-md-3" id="features">
+                        <button class="brushSize fas fa-paint-brush" value="20"></button>
+                        <button class="brushSize fas fa-paint-brush" value="30"></button>
+                        <button class="brushSize fas fa-paint-brush" value="40"></button>
+                        <button class="brushSize fas fa-paint-brush" value="3" id="pencil"></button>
+                        <button class="brushShape fas fa-paint-brush" value="50%"></button>
+                        <button class="brushShape fas fa-paint-brush" value="0%"></button>
+            
+                </div>
 
             <div class="col-xs-9 col-md-9" id="canvas"></div>
+
         </div>
 
     </div>
