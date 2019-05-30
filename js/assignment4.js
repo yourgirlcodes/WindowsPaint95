@@ -39,21 +39,10 @@ var drawOnCanvas = function (e) {
 document.getElementById("clearScreen").addEventListener("click", clearCanvas);
 
 function clearCanvas() {
-        var fullScreen = canvas.getElementsByTagName('div');
-        while (fullScreen.length > 0){
+    var fullScreen = canvas.getElementsByTagName('div');
+    while (fullScreen.length > 0) {
         canvas.removeChild(fullScreen[0]);
-        }
-        };
-
-    // clearButton.addEventListener("click", function(e) {
-    //     clearAll(e)
-    // })};
-
-    // var clearAll = function (e) {
-    //     canvas.parentNode.removeChild(canvas);
-
-    
-
-
+    }
+};
 
 Start();
