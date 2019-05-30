@@ -1,11 +1,10 @@
-/* pen size - eraser - eraser size - circle - square - */
 
 #canvas {
     height: 500px;
     width: 500px;
     border: 2px solid black;
     top: 50px;
-
+    overflow:hidden;
 }
 
 .btn-group-vertical {

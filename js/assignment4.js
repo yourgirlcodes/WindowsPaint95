@@ -1,40 +1,59 @@
 
 
-var colorArray = ["yellow", "red", "blue", "black", "green", "grey"];
+var colorArray = ["yellow", "red", "blue", "black", "green", "grey", "white"];
 
-var features = ["stamp1", "stamp2", "stamp3"];
 
 var canvas = document.getElementById("canvas");
 
-var Start = function(){
-    canvas.addEventListener("click", drawOnCanvas);
+//picking color off color-palette:
+var pickedColor = document.getElementsByClassName("btn-group btn-lg");
+for (var i = 0; i < pickedColor.length; i++) {
+    pickedColor[i].addEventListener('click', function (e) {
+        console.log(e.target.id)
+        color = e.target.id
+    })
 }
 
-var drawOnCanvas = function(){
+
+var Start = function () {
+    canvas.addEventListener("mousemove", function (e) {
+        drawOnCanvas(e)
+
+    });
+}
+
+var color = "black"
+
+var drawOnCanvas = function (e) {
+    console.log(e);
     var dot = document.createElement("div");
-        // dot.style.left = (e.clientX-500) + "px";
-        // dot.style.top = e.clientY + "px";
-        dot.style.width = "2px";
-        // dot.style.height = brushSize +  "px";
-        // dot.style.borderRadius = borderRadius + "px";
-    dot.style.backgroundColor = "black";
+    dot.style.left = e.clientX - e.target.offsetLeft + "px";
+    dot.style.top = e.clientY - e.target.offsetTop + "px";
+    dot.style.width = "10px";
+    dot.style.height = "10px";
     dot.style.position = "absolute";
-
+    dot.style.backgroundColor = color;
     canvas.appendChild(dot);
-
 }
 
+document.getElementById("clearScreen").addEventListener("click", clearCanvas);
 
-function paintColor(e){
-    selectedColor = e.target.id;
-    console.log(selectedColor)
+function clearCanvas() {
+        var fullScreen = canvas.getElementsByTagName('div');
+        while (fullScreen.length > 0){
+        canvas.removeChild(fullScreen[0]);
+        }
+        };
 
-}
+    // clearButton.addEventListener("click", function(e) {
+    //     clearAll(e)
+    // })};
 
+    // var clearAll = function (e) {
+    //     canvas.parentNode.removeChild(canvas);
 
-function clickColour(){
     
-}
+
 
 
 Start();
