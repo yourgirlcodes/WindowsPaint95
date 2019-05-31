@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<HTML>
+<html>
 
 <head>
 
-    <link rel="stylesheet" href="./css/assignment4.css">
+    <link rel="stylesheet" href="css/assignment4.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,28 +21,30 @@
 <body>
 
     <div class="container">
-
-        <div class="nav nav-pills nav-justified" role="group" id="color-palette">
-            <button class="btn-group btn-lg" id="yellow"></button>
-            <button class="btn-group btn-lg" id="red"></button>
-            <button class="btn-group btn-lg" id="blue"></button>
-            <button class="btn-group btn-lg" id="black"></button>
-            <button class="btn-group btn-lg" id="green"></button>
-            <button class="btn-group btn-lg" id="grey"></button>
-            <button class="btn-group btn-lg fas fa-eraser" id="white"></button>
-            <button id="clearScreen">NEW CANVAS</button>
-
+        <div class="row btn-group" role="group" id="colorPalette">
+            <button class="colorBtn btn-lg" id="yellow"></button>
+            <button class="colorBtn btn-lg" id="red"></button>
+            <button class="colorBtn btn-lg" id="blue"></button>
+            <button class="colorBtn btn-lg" id="black"></button>
+            <button class="colorBtn btn-lg" id="green"></button>
+            <button class="colorBtn btn-lg" id="grey"></button>
         </div>
+
+        <div class="row" id="clearErase">
+            <button class="btn-lg" id="clearScreen"><b>NEW CANVAS</b></button>
+            <button class="colorBtn btn-lg" id="white"><b>ERASE</b></button>
+        </div>
+
         <div class="row">
-                <div class="col-xs-3 col-md-3" id="features">
-                        <button class="brushSize fas fa-paint-brush" value="20"></button>
-                        <button class="brushSize fas fa-paint-brush" value="30"></button>
-                        <button class="brushSize fas fa-paint-brush" value="40"></button>
-                        <button class="brushSize fas fa-paint-brush" value="3" id="pencil"></button>
-                        <button class="brushShape fas fa-paint-brush" value="50%"></button>
-                        <button class="brushShape fas fa-paint-brush" value="0%"></button>
-            
-                </div>
+            <div id="features">
+                <button class="brushSize fas fa-paint-brush" value="20">+</button>
+                <button class="brushSize fas fa-paint-brush" value="30">++</button>
+                <button class="brushSize fas fa-paint-brush" value="40">+++</button>
+                <button class="brushSize fas fa-pencil-alt" value="3" id="pencil"></button>
+                <button class="brushShape fas fa-circle" value="50%"></button>
+                <button class="brushShape fas fa-square" value="0%"></button>
+
+            </div>
 
             <div class="col-xs-9 col-md-9" id="canvas"></div>
 
@@ -55,9 +58,10 @@
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
     <script src="js/assignment4.js"></script>
+    <script src="js/script2.js"></script>
 </body>
 
-</HTML>
+</html>
 
 
 

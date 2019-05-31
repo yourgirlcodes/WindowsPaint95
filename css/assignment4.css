@@ -1,49 +1,67 @@
-
 #canvas {
     height: 500px;
     width: 500px;
     border: 2px solid black;
-    top: 50px;
-    overflow:hidden;
+    overflow: hidden;
+    margin-left: 20px;
 }
 
-.btn-group-vertical {
-    top: 80px;
+#colorPalette {
+    margin: 20px;
+    margin-left: 100px;
 }
 
-.btn-group#red {
+#features {
+    margin: 20px;
+    margin-left: 150px;
+}
+
+#clearErase {
+    margin-left: 150px;
+}
+
+.colorBtn#red {
     background-color: red;
     margin: 10px;
     radius: 50%;
 }
 
-.btn-group#green {
+.colorBtn#green {
     background-color: green;
     margin: 10px;
     radius: 50%;
 }
 
-.btn-group#black {
+.colorBtn#black {
     background-color: black;
     margin: 10px;
     radius: 50%;
 }
 
-.btn-group#yellow {
+.colorBtn#yellow {
     background-color: yellow;
     margin: 10px;
     radius: 50%;
-
 }
 
-.btn-group#grey {
+.colorBtn#grey {
     background-color: grey;
     margin: 10px;
     radius: 50%;
 }
 
-.btn-group#blue {
+.colorBtn#blue {
     background-color: blue;
     margin: 10px;
     radius: 50%;
+}
+
+#clearScreen {
+    font-family: 'Amatic SC', cursive;
+    font-size: 22px;
+}
+
+#white {
+    font-family: 'Amatic SC', cursive;
+    font-size: 22px;
 }
