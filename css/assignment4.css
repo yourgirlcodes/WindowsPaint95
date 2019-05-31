@@ -1,59 +1,92 @@
+html, body {
+    margin: 0;
+}
+
+body {
+    background-image: url("http://f.fwallpapers.com/images/glow-dark.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
 #canvas {
     height: 500px;
     width: 500px;
     border: 2px solid black;
     overflow: hidden;
-    margin-left: 20px;
+    left: 30%;
+    background-color: white;
 }
 
 #colorPalette {
     margin: 20px;
-    margin-left: 100px;
+    text-align: center;
 }
 
 #features {
     margin: 20px;
-    margin-left: 150px;
+    text-align: center;
 }
 
 #clearErase {
-    margin-left: 150px;
+    text-align: center;
 }
 
 .colorBtn#red {
     background-color: red;
     margin: 10px;
-    radius: 50%;
+    border: 1px red;
 }
 
-.colorBtn#green {
-    background-color: green;
+.colorBtn#greenyellow {
+    background-color: greenyellow;
     margin: 10px;
-    radius: 50%;
+    border: 1px greenyellow;
 }
 
-.colorBtn#black {
-    background-color: black;
+.colorBtn#orange {
+    background-color: orange;
     margin: 10px;
-    radius: 50%;
+    border: 1px orange;
 }
 
 .colorBtn#yellow {
     background-color: yellow;
     margin: 10px;
-    radius: 50%;
+    border: 1px yellow;
+}
+
+.colorBtn#magenta {
+    background-color: magenta;
+    margin: 10px;
+    border: 1px magenta;
 }
 
 .colorBtn#grey {
     background-color: grey;
     margin: 10px;
-    radius: 50%;
+    border: 1px grey;
 }
 
 .colorBtn#blue {
     background-color: blue;
     margin: 10px;
-    radius: 50%;
+    border: 1px blue;
+}
+
+.colorBtn#aqua {
+    background-color: aqua;
+    margin: 10px;
+    border: 1px aqua;
 }
 
 #clearScreen {
@@ -64,4 +97,10 @@
 #white {
     font-family: 'Amatic SC', cursive;
     font-size: 22px;
+}
+
+@media screen and (max-width: 992px) {
+    #canvas {
+        left: 10%;
+    }
 }

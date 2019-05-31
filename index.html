@@ -13,8 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-    <title>Windows 95 Paint Application</title>
+    <title>Windows 95 Paint Application - Zoe</title>
 
 </head>
 
@@ -22,21 +21,28 @@
 
     <div class="container">
         <div class="row btn-group" role="group" id="colorPalette">
-            <button class="colorBtn btn-lg" id="yellow"></button>
-            <button class="colorBtn btn-lg" id="red"></button>
-            <button class="colorBtn btn-lg" id="blue"></button>
-            <button class="colorBtn btn-lg" id="black"></button>
-            <button class="colorBtn btn-lg" id="green"></button>
-            <button class="colorBtn btn-lg" id="grey"></button>
+            <div class="col-xs-12 col-md-12">
+                <button class="colorBtn btn-lg" id="yellow"></button>
+                <button class="colorBtn btn-lg" id="red"></button>
+                <button class="colorBtn btn-lg" id="blue"></button>
+                <button class="colorBtn btn-lg" id="orange"></button>
+                <button class="colorBtn btn-lg" id="greenyellow"></button>
+                <button class="colorBtn btn-lg" id="magenta"></button>
+                <button class="colorBtn btn-lg" id="grey"></button>
+                <button class="colorBtn btn-lg" id="aqua"></button>
+
+            </div>
         </div>
 
         <div class="row" id="clearErase">
-            <button class="btn-lg" id="clearScreen"><b>NEW CANVAS</b></button>
-            <button class="colorBtn btn-lg" id="white"><b>ERASE</b></button>
+            <div class="col-xs-12 col-md-12">
+                <button class="btn-lg" id="clearScreen"><b>NEW CANVAS</b></button>
+                <button class="colorBtn btn-lg" id="white"><b>ERASE</b></button>
+            </div>
         </div>
 
-        <div class="row">
-            <div id="features">
+        <div class="row" id="features">
+            <div class="col-12">
                 <button class="brushSize fas fa-paint-brush" value="20">+</button>
                 <button class="brushSize fas fa-paint-brush" value="30">++</button>
                 <button class="brushSize fas fa-paint-brush" value="40">+++</button>
@@ -45,46 +51,24 @@
                 <button class="brushShape fas fa-square" value="0%"></button>
 
             </div>
-
-            <div class="col-xs-9 col-md-9" id="canvas"></div>
-
         </div>
 
+        <div class="row">
+            <div class="col-xs-12 col-md-12" id="canvas"></div>
+        </div>
     </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
     <script src="js/assignment4.js"></script>
-    <script src="js/script2.js"></script>
 </body>
 
 </html>
-
-
-
-
-<!-- Tips from TA's
-start from one color just working - one dot on a click. divs multiply of x and y axis
-many many divs
-event listener click on one div and paintit 
-background color and then mouse over - so click and mouse over or hold down 
-
-create a div and an interval and every milisecond replace the div as long as you hold themouse down
-find coordinates when user uses mouse click
-ie click and create an element an dpin it to canvas. dont know the location of div - need to find it. how to find coordinates of mouse click. position of every div - absolute? 
-mouse events most important 
-appenidng it to the dom 
-in html lots of divs and append to body
-or other way is html of sooo many divs can use a loop to create it. event listener on evry div. 
-
-second 
-blank piece 
-have  afunction when you call it usually on click or mouseover you create a div slash element add css attr aappend it to the body
-
-change size of brush just hange width and height or whatever 
-
-
-change to circle border radius 50%  -->

@@ -1,7 +1,3 @@
-
-var colorArray = ["yellow", "red", "blue", "black", "green", "grey", "white"];
-
-
 var color = "black"
 var width = "10px"
 var height = "10px"
@@ -9,7 +5,6 @@ var height = "10px"
 
 var canvas = document.getElementById("canvas");
 
-//picking color off color-palette:
 var pickedColor = document.getElementsByClassName("colorBtn btn-lg");
 for (var i = 0; i < pickedColor.length; i++) {
     pickedColor[i].addEventListener('click', function (e) {
