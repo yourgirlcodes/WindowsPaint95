@@ -97,6 +97,17 @@ body {
 #white {
     font-family: 'Amatic SC', cursive;
     font-size: 22px;
+    background-color: white;
+}
+
+#save {
+    font-family: 'Amatic SC', cursive;
+    font-size: 22px;
+}
+
+#load{
+    font-family: 'Amatic SC', cursive;
+    font-size: 22px;
 }
 
 @media screen and (max-width: 992px) {

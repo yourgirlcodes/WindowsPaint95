@@ -1,7 +1,7 @@
 var color = "black"
 var width = "10px"
 var height = "10px"
-
+var counter = 0;
 
 var canvas = document.getElementById("canvas");
 
@@ -52,6 +52,7 @@ var drawOnCanvas = function (e) {
     dot.style.position = "absolute";
     dot.style.backgroundColor = color;
     canvas.appendChild(dot);
+    saveCurrent.call();
 }
 
 
@@ -64,5 +65,29 @@ function clearCanvas() {
         canvas.removeChild(fullScreen[0]);
     }
 };
+
+var save = document.getElementById("save").addEventListener("click", saveCanvas);
+var load = document.getElementById("load").addEventListener("click", loadCanvas);
+
+function saveCanvas() {
+    var file = prompt("Save canvas as: ");
+    var fileName = canvas.innerHTML;
+    localStorage.setItem(file, fileName);
+};
+
+
+function loadCanvas() {
+    var loadfile = prompt("Please enter canvas you would like to load: ");
+    var inputName = localStorage.getItem(loadfile);
+    if (inputName != null) {
+        canvas.innerHTML = localStorage.getItem(loadfile);
+    }
+    else {
+        alert("This canvas does not exist");
+        load();
+    }
+};
+
+
 
 Start();
