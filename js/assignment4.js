@@ -52,7 +52,6 @@ var drawOnCanvas = function (e) {
     dot.style.position = "absolute";
     dot.style.backgroundColor = color;
     canvas.appendChild(dot);
-    saveCurrent.call();
 }
 
 
