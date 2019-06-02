@@ -1,7 +1,5 @@
-var color = "black"
-var width = "10px"
-var height = "10px"
 var counter = 0;
+var clicked = false;
 
 var canvas = document.getElementById("canvas");
 
@@ -29,12 +27,20 @@ for (var i = 0; i < brushShapes.length; i++) {
     })
 }
 
+    canvas.addEventListener("mousedown", function () {
+        clicked = true;
+        Start();
+    });
+
 
 var Start = function () {
-    canvas.addEventListener("mousemove", function (e) {
-        drawOnCanvas(e);
-    });
+    canvas.addEventListener("mousemove", drawOnCanvas);
 }
+
+    canvas.addEventListener("mouseup", function() {
+        clicked = false;
+    });
+
 
 var color = "black";
 var width = "10";
@@ -43,6 +49,7 @@ var radius = "0%";
 
 var drawOnCanvas = function (e) {
     console.log(e);
+    if (clicked === true){
     var dot = document.createElement("div");
     dot.style.left = e.pageX - e.target.offsetLeft + "px";
     dot.style.top = e.pageY - e.target.offsetTop + "px";
@@ -52,6 +59,7 @@ var drawOnCanvas = function (e) {
     dot.style.position = "absolute";
     dot.style.backgroundColor = color;
     canvas.appendChild(dot);
+    }
 }
 
 
@@ -87,6 +95,6 @@ function loadCanvas() {
     }
 };
 
-
-
+afterStart();
+beforeStart();
 Start();
